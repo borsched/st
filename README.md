@@ -19,7 +19,7 @@ nix develop github:siduck/st
 # Arch
 pacman -S gd
 
-# Install font-symbola and libXft-bgra
+# Install ttf-hack-nerd
 ```
 
 ## Try it out!
