@@ -8,7 +8,7 @@
 
 ```
 # Void
-xbps-install libXft-devel libX11-devel harfbuzz-devel libXext-devel libXrender-devel libXinerama-devel
+xbps-install libXft-devel libX11-devel harfbuzz-devel libXext-devel libXrender-devel libXinerama-devel gd-devel
 
 # Debian (and ubuntu probably)
 apt install build-essential libxft-dev libharfbuzz-dev libgd-dev
@@ -33,6 +33,7 @@ To do so, simply run (requires [Nix](https://nixos.org/download.html))
 ```
 git clone https://github.com/siduck/st.git
 cd st
+(change the compiler if you cant use c99 to compile: sed -i 's/^#\ CC\ =\ c99/CC=gcc/' config.mk)
 sudo make install
 xrdb merge pathToXresourcesFile
 ```
@@ -64,7 +65,7 @@ Add `st.url = "github:siduck/st";` to your inputs and install `inputs.st.package
 - xresources
 - sync patch ( Better draw timing to reduce flicker/tearing and improve animation smoothness )
 - live reload ( change colors/fonts on the fly )
-  and more...
+- st-swapmouse
   <br>
 
 ## Xresources live-reload
